@@ -1,3 +1,7 @@
+//Esta variable serán la lista inicial, después de manipularlos
+//ya no volverán a cargarse a menos que los crees de manera manual
+//Es decir, solo se muestran una vez, si los eliminas o actualizas ya tendran
+//sus nuevos valores o simplemente no existirán
 var personas = [
   { nombre: "Juan", apellido: "Hernández" },
   { nombre: "Adrian", apellido: "Domínguez" },
@@ -6,6 +10,7 @@ var personas = [
   { nombre: "Pedro", apellido: "García" },
   { nombre: "Juan", apellido: "Pérez" }
 ];
+//Variable para obtener el index del select o posición en la lista Personas[]
 var i;
 
 
@@ -40,12 +45,19 @@ function insertarPersona(name, lastname) {
 
 //Función para cargar los datos de la lista Personas al select con id=panel
 function cargarDatos(){
-  //Guardamos la lista del almacenaminto en la lista Personas, osea lo traemos de vuelta.
-  //
-  if (localStorage.length < 1){
+  //Verificamos si tenemos almacenado una key de nombre "Personas"
+  //Si en dado que no existe esa key devolverá null y se ejecutará lo
+  //que está dentro del if, esto solo ocurrira una vez ya que si no existe se creará
+  //y nunca más deberá será null a menos que elimines esa key de forma manual en el navegador
+  //o lo elmines desde aquí en el código
+  if ((localStorage.getItem("Personas") == null)){
+    //Si no existe la key personas se crea con la lista de personas
+    //que se le dió al iniciar la aplicación
     localStorage.setItem("Personas", JSON.stringify(personas));
   }
+  //Obtenemos esa lista actual y lo guardamos
   personas = JSON.parse(localStorage.getItem("Personas"));
+  //Obtenemos el select y lo guradamos en la variable panel para poder acceder a el
   let panel = document.querySelector("#panel");
   panel.textContent = "";
   //Recorrremos la lista Personas con un forEach y vamos rellenando el select
