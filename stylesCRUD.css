@@ -1,0 +1,102 @@
+﻿ 
+html{
+    box-sizing:border-box; 
+    overflow-x:hidden;
+    font-family:Verdana,sans-serif;
+    font-size:15px;
+    line-height:1.5;
+}
+
+*,*:before,*:after{
+    box-sizing:inherit;
+}
+
+body{
+    margin:0;
+    font-family:Verdana,sans-serif;
+    font-size:15px;
+    line-height:1.5;
+}
+
+
+/*Padding y margen de Contenedor y panel*/
+.w3-container,.panel{
+    padding:0.01em 16px;
+}
+.panel{
+    margin-top:16px;
+    margin-bottom:16px;
+}
+
+
+/*Hover y color de los botones y banner*/
+.w3-blue{
+    color:#fff!important;
+    background-color:#2196F3!important
+}
+.w3-red{
+    color:#fff!important;
+    background-color:red!important
+}
+    .w3-button:hover{
+        color:#000!important;
+        background-color:#ccc!important
+    }
+.w3-yellow,.w3-hover-yellow:hover{
+    color:#000!important;
+    background-color:#ffeb3b!important
+}
+
+
+/*Le da bordes redondeados de 4px a los botones con border-radius*/
+.w3-round,.w3-round-medium{
+    border-radius:4px
+}
+
+
+/*Tamaños, fuentes de letra, margenes de h1*/
+h1{
+    font-size:36px;
+    font-family:"Segoe UI",Arial,sans-serif;
+    font-weight:400;
+    margin:10px 0;
+}
+
+
+/*Margenes al 0 y heredamos la fuente del padre*/
+button,input,select{
+    font:inherit;
+    margin:0;
+}
+
+
+/*Le da la apariencia a los botones*/
+.w3-btn,.w3-button{
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+
+/*Le da un mejor formato a los input*/
+.w3-input{
+    padding:8px;
+    display:block;
+    border:none;
+    border-bottom:1px solid #ccc;
+    width:100%;
+}
+
+
+
+
+
+

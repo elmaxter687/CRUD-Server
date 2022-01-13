@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesCRUD.css">
+    <title>Evaluación Segunda Oportunidad del Tema 4</title>
+  </head>
+
+  <body>
+    <div class="w3-container w3-blue">
+      <h1>Programación del lado del servidor<b style="float: right; margin-right: 20px;">Programación WEB</b></h1>      
+    </div> 
+  <form class="w3-container" onsubmit="event.preventDefault()">
+    <br>
+    <input class="w3-input" id="nombre" placeholder="Nombre" />
+    <input class="w3-input" id="apellido" placeholder="Apellido" />
+    <br>
+    <button class="w3-button w3-round w3-yellow" onclick="limpiarForm()">Limpiar Formulario</button>
+    <br /><br />
+
+    <button class="w3-button w3-round w3-blue" onclick="crear()">Crear</button>
+    <button class="w3-button w3-round w3-blue" onclick="actualizar()">Actualizar</button>
+    <button class="w3-button w3-round w3-red" onclick="borrar()">Eliminar</button>
+    <br /><br />
+    <select id="panel" size="15" onclick="pnlClick()"></select>
+  </form>
+  <script src="jsCRUD.js"></script>
+  </body>
+</html>
