@@ -42,7 +42,7 @@ function insertarPersona(name, lastname) {
 function cargarDatos(){
   //Guardamos la lista del almacenaminto en la lista Personas, osea lo traemos de vuelta.
   //
-  if (localStorage.length < 0){
+  if (localStorage.length < 1){
     localStorage.setItem("Personas", JSON.stringify(personas));
   }
   personas = JSON.parse(localStorage.getItem("Personas"));
