@@ -131,7 +131,7 @@ function borrar() {
   limpiarForm();
 }
 
-//Al inicializar la página se tiene que cargar datos en el select en dado caso
-//que haya datos guardados en el almacenamiento local, sino es así entonces
-//estará en blanco el select hasta que agregues datos.
+/*Al inicializar la página por primera vez se cargan los datos de la lista Personas[] en el select, en dado caso
+que hayamos borramos esos datos o los hayamos manipulados se cargarán con los cambios o  en dado caso de que hayamos
+borrado toda la lista el select estará vacio hasta que agregues datos.*/
 cargarDatos();
